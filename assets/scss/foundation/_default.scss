@@ -1,0 +1,233 @@
+/*! purgecss start ignore */
+html,
+body,
+#__nuxt,
+#__layout {
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  line-height: 1;
+  font-family: $font-style;
+  color: $color-font;
+  background: $body-background;
+  -webkit-overflow-scrolling: touch;
+}
+.#{$pc} {
+  font-size: 1.3rem;
+}
+.#{$sp} {
+  font-size: 1.4rem;
+}
+*:not(hr):not(legend),
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+figcaption {
+  margin: 0;
+}
+ul,
+ol,
+dl,
+dt,
+dd,
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+}
+a,
+button {
+  outline: none;
+  transition: opacity $transition ease;
+  &:focus {
+    outline: none;
+  }
+}
+a {
+  color: $color-link;
+  text-decoration: none;
+  &[href^='tel'] {
+    .#{$pc} & {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}
+img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+  backface-visibility: hidden;
+}
+svg {
+  display: inline-block;
+  fill: currentColor;
+}
+picture {
+  display: inline-block;
+}
+i {
+  font-style: normal;
+}
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+th {
+  font-weight: normal;
+}
+td {
+  text-align: center;
+}
+input {
+  border-radius: 0;
+}
+[role='button'],
+[type='button'],
+[type='reset'],
+[type='submit'],
+button {
+  cursor: pointer;
+}
+[disabled] {
+  pointer-events: none;
+  cursor: default;
+}
+[type='number'] {
+  width: auto;
+}
+[type='search'] {
+  appearance: textfield;
+  outline-offset: -0.02rem;
+}
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+  appearance: none;
+}
+textarea {
+  height: auto;
+  overflow: auto;
+  vertical-align: top;
+  resize: none;
+  border-radius: 0;
+}
+button,
+input,
+optgroup,
+select,
+textarea,
+small {
+  font: inherit;
+}
+optgroup {
+  font-weight: 700;
+}
+button {
+  padding: 0;
+  overflow: visible;
+}
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border-style: 0;
+}
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+[type='reset'],
+[type='submit'],
+button,
+html [type='button'] {
+  appearance: button;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  background-color: transparent;
+  border-style: none;
+}
+input:not([type='checkbox']),
+input:not([type='radio']),
+textarea {
+  appearance: none;
+}
+select {
+  cursor: pointer;
+  border-radius: 0;
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+select::-ms-value {
+  color: currentColor;
+  background: none;
+}
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+legend {
+  display: table;
+  max-width: 100%;
+  color: inherit;
+  white-space: normal;
+  border: none;
+}
+::-webkit-file-upload-button {
+  appearance: button;
+  font: inherit;
+}
+input,
+textarea,
+select {
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  background: #fff;
+  border: none;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px white inset;
+}
+:placeholder-shown {
+  color: $color-placeholder;
+}
+::-webkit-input-placeholder {
+  color: $color-placeholder;
+}
+::-moz-placeholder {
+  color: $color-placeholder;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: $color-placeholder;
+}
+/*! purgecss end ignore */

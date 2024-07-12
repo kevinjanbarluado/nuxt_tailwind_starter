@@ -1,0 +1,78 @@
+// ==========================================================================//
+//
+// [パーツ情報 - 変数]
+//
+// ========================================================================== //
+// theme
+$pc: theme-pc;
+$sp: theme-sp;
+
+// SP版をViewport750px固定で表示する際の倍率
+$rate: 2;
+
+// フォントファミリー
+$font-style: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ ゴシック', sans-serif;
+
+// body背景
+$body-background: #fff;
+
+// コンテンツ幅
+$contents-width: 936px;
+
+// コンテンツ余白
+$contents-gatter: 16px;
+
+// デフォルトフォントサイズ
+$font-size: 1.3rem;
+
+// ブランドカラー
+$color-brand: #1587cd;
+$color-brand-hover: #1773ae;
+$color-brand-other: #d14271;
+$color-brand-assist: #3aae36;
+$color-brand-discovery: #fd9000;
+$color-brand-bg: #cfe7f5;
+$color-brand-other-bg: #f6d9e2;
+$color-brand-assist-bg: #c7e2cb;
+$color-brand-discovery-bg: #efdcc1;
+$color-primary: #0087d2;
+$color-secondary: #7F8288;
+
+// 警告カラー
+$color-error: #f00;
+
+// グレースケールカラー
+$color-black: #000;
+$color-white: #fff;
+
+// デフォルトフォントカラー
+$color-font: #141821;
+
+//デフォルトリンクカラー
+$color-link: $color-brand;
+
+// ボーダーカラー
+$color-border: #d1d4d7;
+
+// プレースホルダーカラー
+$color-placeholder: #b4b4b4;
+
+// アニメーションスピード
+$transition: 0.2s;
+
+// イージング
+$easing: ease-out;
+
+// 透明度
+$opacity: 0.7;
+
+// 重なり順
+$zindex-lv1: 1;
+$zindex-lv2: 10;
+$zindex-lv3: 100;
+$zindex-lv4: 1000;
+$zindex-lv5: 10000;
+$zindex-lv6: 100000;
+
+//SVG load用画像パス
+$svgUrl: '../../../static/assets/images';

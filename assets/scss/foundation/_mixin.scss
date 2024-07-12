@@ -1,0 +1,116 @@
+// ==========================================================================//
+//
+// [パーツ情報 - mixin]
+//
+// ========================================================================== //
+// 要素を隠す
+@mixin hidden($speed: $transition) {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height $speed $easing;
+}
+
+// 要素を消す
+@mixin none() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+// 100vh
+@mixin max-vh($space: 0px) {
+  height: calc(100vh - #{$space});
+  height: calc(100dvh - #{$space}); // Mobile Safari対策
+}
+
+// full
+@mixin full() {
+  position: relative;
+  right: 50%;
+  left: 50%;
+  width: 100vw;
+  margin-right: -50vw;
+  margin-left: -50vw;
+}
+
+// contents
+@mixin contents($gatter: $contents-gatter) {
+  width: 100%;
+  max-width: #{$contents-width + $gatter * 2};
+  padding-right: $gatter;
+  padding-left: $gatter;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+//カラム @include col(3, 20, 40, '&__item');
+@mixin col($column-count, $column-margin, $column-margin-bottom, $selector: '.item') {
+  $margin-size: #{$column-margin / 2 + px};
+  $margin-bottom-size: $column-margin-bottom + px;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -#{$margin-size};
+  margin-bottom: -#{$margin-bottom-size};
+  margin-left: -#{$margin-size};
+
+  @at-root #{$selector} {
+    width: (100% / #{$column-count});
+    padding-right: $margin-size;
+    padding-bottom: $margin-bottom-size;
+    padding-left: $margin-size;
+    @content;
+  }
+}
+
+// full
+@mixin full() {
+  margin-right: -#{$contents-gatter};
+  margin-left: -#{$contents-gatter};
+  @media screen and (min-width: #{$contents-width + $contents-gatter * 2}) {
+    margin-left: calc(((100vw - #{$contents-width}) / 2) * -1);
+    margin-right: calc(((100vw - #{$contents-width}) / 2) * -1);
+  }
+  @at-root .#{$pc} & {
+    min-width: #{$contents-width + $contents-gatter * 2};
+  }
+}
+
+// contents
+@mixin contents($gatter: $contents-gatter) {
+  max-width: 100vw;
+  padding-left: $contents-gatter;
+  padding-right: $contents-gatter;
+  @media screen and (min-width: #{$contents-width + $contents-gatter * 2}) {
+    padding-left: calc((100vw - #{$contents-width}) / 2);
+    padding-right: calc((100vw - #{$contents-width}) / 2);
+  }
+  @at-root .#{$pc} & {
+    min-width: #{$contents-width + $contents-gatter * 2};
+  }
+}
+
+//カラム @include col(3, 20, 40, '&__item');
+@mixin col($column-count, $column-margin, $column-margin-bottom, $selector: '.item') {
+  $margin-size: #{$column-margin / 2 + px};
+  $margin-bottom-size: $column-margin-bottom + px;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -#{$margin-size};
+  margin-bottom: -#{$margin-bottom-size};
+  margin-left: -#{$margin-size};
+
+  @at-root #{$selector} {
+    width: (100% / #{$column-count});
+    padding-right: $margin-size;
+    padding-bottom: $margin-bottom-size;
+    padding-left: $margin-size;
+    @content;
+  }
+}
